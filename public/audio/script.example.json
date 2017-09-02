@@ -1,0 +1,13 @@
+{
+  "songs": [
+    {
+      "file": "song.mp3",
+      "description": "The audio description"
+    },
+    {
+      "file": "song2.mp3",
+      "description": "The audio description",
+      "confirm": "Do you really want do play this song?"
+    }
+  ]
+}

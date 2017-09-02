@@ -1,0 +1,14 @@
+{
+  "name": "wedding-play",
+  "version": "1.0.0",
+  "description": "Grid of audio buttons for ceremonies",
+  "main": "index.js",
+  "repository": "git@github.com:calebeoliveira/wedding-play.git",
+  "author": "Calebe Oliveira <becalebe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "normalize.css": "^7.0.0"
+  }
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding Play</title>
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h2>Wedding Play</h2>
+
+    <h4>Controls</h4>
+    <div class="controls">
+        <div class="control">
+            <input id="auto-fade" type="checkbox" data-auto-fade>
+            <label for="auto-fade">Auto FadeIn/FadeOut</label>
+        </div>
+    </div>
+
+    <h4>Playlist</h4>
+    <div class="table main-table">
+        <div class="thead">
+            <div class="tr">
+                <div class="th">Order</div>
+                <div class="th">File</div>
+                <div class="th">Description</div>
+                <div class="th">Play/Pause</div>
+                <div class="th">Done</div>
+            </div>
+        </div>
+        <div class="tbody">
+            <% script.songs.forEach((song, i) => { %>
+            <div class="tr transition <%= song.color ? `color-${song.color}` : '' %>" data-song-id="<%= i %>">
+                <div class="td">#<%= i+1 %></div>
+                <div class="td"><%= song.file %></div>
+                <div class="td"><%- song.description %></div>
+                <div class="td"><button type="button" data-play>Play</button></div>
+                <div class="td text-center"><input data-done-check type="checkbox"></div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <div class="player">
+        <% script.songs.forEach((song, i) => { %>
+        <audio src="/audio/<%- encodeURI(song.file) %>" controls controlsList="nodownload" data-audio-id="<%= i %>"></audio>
+        <% }); %>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

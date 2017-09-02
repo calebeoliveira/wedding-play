@@ -1,0 +1,189 @@
+/* nunito-regular - latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-v8-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+    url('../fonts/nunito-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/nunito-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/nunito-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/nunito-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/nunito-v8-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+/* nunito-600 - latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/nunito-v8-latin-600.eot'); /* IE9 Compat Modes */
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'),
+    url('../fonts/nunito-v8-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/nunito-v8-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/nunito-v8-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/nunito-v8-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/nunito-v8-latin-600.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+/**
+Blue: #1997c6
+Red: #E64759
+Gray: #434857
+Lilac: #9F86FF
+Lemon: #E4D836
+Green: #1bc98e
+ */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #cfd2da;
+    background-color: #252830;
+    padding: 1rem 1rem 72px;
+    line-height: 1.2rem;
+}
+
+.color-blue {
+    color: #1997c6;
+}
+
+.color-red {
+    color: #E64759;
+}
+
+.color-gray {
+    color: #434857;
+}
+
+.color-lilac {
+    color: #9F86FF;
+}
+
+.color-lemon {
+    color: #E4D836;
+}
+
+.color-green {
+    color: #1bc98e;
+}
+
+h3, h4, h5 {
+    color: #1997c6;
+}
+
+.transition {
+    transition: all 150ms ease-in-out;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.controls {
+    background-color: #434857;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.controls label {
+    cursor: pointer;
+    user-select: none;
+}
+
+/** Table **/
+
+.main-table {
+    width: 100%;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+
+.thead {
+    display: table-header-group;
+    vertical-align: middle;
+}
+
+.tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+.tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+.tr.done {
+    opacity: 0.3;
+}
+
+.th {
+    font-weight: bold;
+}
+
+.td {
+    border-bottom: 1px solid #434857;
+}
+
+.tr:last-child .td {
+    border: 0;
+}
+
+.td, .th {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 0.5rem;
+}
+
+.tbody .tr:hover {
+    background-color: rgba(67, 72, 87, 0.5);
+}
+
+.tr.done:hover {
+    background-color: initial;
+}
+
+
+/** Player **/
+
+.player {
+    width: 100vw;
+    height: 40px;
+    background-color: #9F86FF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.player audio {
+    width: 100%;
+    height: 37px;
+    display: none;
+}
+
+.player audio.visible {
+    display: inline-block;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+.player audio::-webkit-media-controls-panel {
+    background-color: transparent;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+.player audio::-webkit-media-controls-timeline  {
+    background: gray;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+.player audio::-webkit-media-controls-volume-slider,
+.player audio::-webkit-media-controls-timeline{
+    -webkit-filter: hue-rotate(0) saturate(0);
+}
